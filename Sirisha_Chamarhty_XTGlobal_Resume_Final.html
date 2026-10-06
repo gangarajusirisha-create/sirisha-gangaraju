@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sirisha Chamarthy | Digital Marketing & Performance Marketing Strategist</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root{
+    --navy:#102A43;
+    --navy2:#163B59;
+    --teal:#1F7A78;
+    --teal-soft:#EAF5F4;
+    --ink:#243447;
+    --muted:#607080;
+    --line:#D9E2EC;
+    --paper:#FFFFFF;
+    --bg:#EEF2F5;
+    --gold:#B78B3E;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family: "Inter","Segoe UI",Arial,sans-serif;
+    font-size:9.2pt;
+    line-height:1.48;
+  }
+  .page{
+    width:210mm;
+    min-height:297mm;
+    margin:0 auto 18px;
+    background:var(--paper);
+    box-shadow:0 6px 30px rgba(16,42,67,.12);
+    overflow:hidden;
+  }
+  .hero{
+    padding:27px 34px 22px;
+    background:linear-gradient(135deg,var(--navy),var(--navy2));
+    color:#fff;
+    position:relative;
+  }
+  .hero:after{
+    content:"";
+    position:absolute;
+    right:34px; top:22px;
+    width:86px; height:4px;
+    background:var(--teal);
+    border-radius:4px;
+  }
+  .name{
+    font-size:27pt;
+    letter-spacing:-.7px;
+    font-weight:750;
+    margin:0;
+  }
+  .headline{
+    margin-top:4px;
+    color:#D9EEF0;
+    font-size:11.2pt;
+    font-weight:600;
+    letter-spacing:.15px;
+  }
+  .contact{
+    margin-top:13px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px 18px;
+    color:#E8EEF3;
+    font-size:8.3pt;
+  }
+  .contact span{white-space:nowrap}
+  .intro{
+    padding:17px 34px 15px;
+    border-bottom:1px solid var(--line);
+  }
+  .intro-grid{
+    display:grid;
+    grid-template-columns:1fr 205px;
+    gap:22px;
+    align-items:start;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:1.35px;
+    color:var(--teal);
+    font-weight:800;
+    font-size:7.5pt;
+    margin-bottom:5px;
+  }
+  .summary{margin:0;color:#34495E}
+  .stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+  }
+  .stat{
+    background:#F5F8FA;
+    border:1px solid var(--line);
+    border-radius:7px;
+    padding:8px 9px;
+  }
+  .stat strong{display:block;font-size:13pt;color:var(--navy)}
+  .stat span{font-size:7.2pt;color:var(--muted)}
+  .main{
+    display:grid;
+    grid-template-columns:1fr 220px;
+    gap:25px;
+    padding:19px 34px 28px;
+  }
+  h2{
+    font-size:10.5pt;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--navy);
+    margin:0 0 9px;
+    padding-bottom:5px;
+    border-bottom:2px solid var(--teal);
+  }
+  h3{
+    margin:0;
+    font-size:10.4pt;
+    color:var(--navy);
+  }
+  .role{
+    margin-bottom:16px;
+  }
+  .role-head{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    align-items:flex-start;
+  }
+  .company{
+    font-weight:800;
+    color:var(--teal);
+    font-size:8.1pt;
+    letter-spacing:.3px;
+    margin-top:2px;
+  }
+  .date{
+    color:var(--muted);
+    font-size:7.8pt;
+    white-space:nowrap;
+    text-align:right;
+  }
+  .role ul{
+    margin:6px 0 0 15px;
+    padding:0;
+  }
+  .role li{margin:3px 0}
+  .side-section{margin-bottom:18px}
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+  }
+  .tag{
+    padding:4px 7px;
+    border-radius:4px;
+    background:var(--teal-soft);
+    color:#165C5A;
+    border:1px solid #CFE7E5;
+    font-size:7.2pt;
+    font-weight:650;
+  }
+  .side-list{
+    margin:0;
+    padding-left:15px;
+  }
+  .side-list li{margin:4px 0}
+  .ai-box{
+    background:#F7FAFB;
+    border:1px solid var(--line);
+    border-left:4px solid var(--teal);
+    border-radius:6px;
+    padding:10px 11px;
+  }
+  .ai-box p{margin:0 0 6px}
+  .ai-box p:last-child{margin-bottom:0}
+
+  .ai-box p + p{margin-top:8px}
+  .highlight{
+    background:var(--navy);
+    color:#fff;
+    border-radius:7px;
+    padding:12px 13px;
+  }
+  .highlight h2{color:#fff;border-bottom-color:#4EA7A4}
+  .highlight strong{color:#BDE8E6}
+  .achievements{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+  }
+  .achievement{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:8px;
+    background:#FBFCFD;
+  }
+  .achievement strong{display:block;color:var(--navy);font-size:8.1pt}
+  .achievement span{font-size:7.2pt;color:var(--muted)}
+  .footer{
+    border-top:1px solid var(--line);
+    margin:0 34px;
+    padding:9px 0 18px;
+    color:#7A8896;
+    font-size:7pt;
+    display:flex;
+    justify-content:space-between;
+  }
+  .page-break{break-before:page}
+  .case{
+    border:1px solid var(--line);
+    border-radius:7px;
+    padding:10px 11px;
+    margin-bottom:9px;
+  }
+  .case-title{
+    color:var(--navy);
+    font-weight:800;
+    font-size:9pt;
+    margin-bottom:3px;
+  }
+  .case p{margin:0;color:#455A6F}
+  .disclaimer{
+    font-size:7.1pt;
+    color:var(--muted);
+    background:#F8FAFB;
+    border:1px solid var(--line);
+    padding:8px 9px;
+    border-radius:5px;
+  }
+  @media print{
+    body{background:#fff}
+    .page{margin:0;box-shadow:none}
+    .no-print{display:none}
+  }
+  @media(max-width:800px){
+    .page{width:100%;min-height:auto}
+    .main,.intro-grid{grid-template-columns:1fr}
+    .main{padding:18px}
+    .hero,.intro{padding-left:18px;padding-right:18px}
+    .footer{margin:0 18px}
+    .role-head{display:block}
+    .date{text-align:left;margin-top:2px}
+  }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <header class="hero">
+    <h1 class="name">SIRISHA CHAMARTHY</h1>
+    <div class="headline">Senior Digital Marketing &amp; Performance Marketing Strategist</div>
+    <div class="contact">
+      <span>Hyderabad, Telangana, India</span>
+      <span>Open to Hybrid</span>
+      <span>Australia Shift</span>
+      <span>International Markets</span>
+      <span>[Phone]</span>
+      <span>[Email]</span>
+      <span>[LinkedIn]</span>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="intro-grid">
+      <div>
+        <div class="eyebrow">Executive Profile</div>
+        <p class="summary">
+          Digital Marketing and Performance Marketing professional with <strong>9+ years of professional experience</strong>
+          across Google Ads, paid media, SEO, analytics, digital strategy, customer acquisition, technical operations
+          and international customer environments. Hands-on exposure to Google Ads, Performance Max, Meta Ads,
+          LinkedIn Ads, TikTok Ads, GA4, Google Search Console and SEO. Practical experience applying
+          <strong>generative AI to research, strategy, SEO, content, creative direction, campaign ideation and marketing workflows</strong>.
+          Combines marketing depth with technical problem-solving, stakeholder management and data-driven operations.
+        </p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>9+</strong><span>Years professional experience</span></div>
+        <div class="stat"><strong>Google</strong><span>Ads &amp; Analytics ecosystem</span></div>
+        <div class="stat"><strong>AI</strong><span>Strategy &amp; workflow application</span></div>
+        <div class="stat"><strong>7K+</strong><span>Branches supported at JPMC</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div>
+      <section>
+        <h2>Core Experience</h2>
+
+        <article class="role">
+          <div class="role-head">
+            <div>
+              <h3>Digital Marketing Consultant / Performance Marketing &amp; SEO</h3>
+              <div class="company">Independent / Agency Consulting · Hyderabad · International Clients</div>
+            </div>
+            <div class="date">2024 – Present</div>
+          </div>
+          <ul>
+            <li>Develop integrated digital strategies across <strong>Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, SEO, content and conversion optimisation</strong>.</li>
+            <li>Plan campaigns for lead generation, ecommerce sales, customer acquisition, brand awareness and remarketing.</li>
+            <li>Build and optimise Google Ads campaigns including Search and Performance Max, with emphasis on targeting, intent, creative and conversion performance.</li>
+            <li>Develop paid-social approaches covering audience segmentation, retargeting, creative testing and campaign optimisation.</li>
+            <li>Develop SEO strategies using keyword research, search intent, technical SEO, content optimisation and performance analysis.</li>
+            <li>Apply <strong>AEO, GEO and SXO</strong> concepts to improve visibility across traditional and generative search environments.</li>
+            <li>Create multi-channel content strategies and calendars across websites, LinkedIn, Instagram, Facebook, X, Pinterest, Tumblr and other channels.</li>
+            <li>Use GA4, Search Console, Meta reporting and analytics platforms to turn performance data into actionable recommendations.</li>
+            <li>Develop AI-assisted workflows for market research, competitor analysis, keyword discovery, campaign concepts, content frameworks, creative briefs and reporting.</li>
+            <li>Coordinate paid, organic, website and content activity to create consistent customer journeys.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <div>
+              <h3>Associate II – Technical Support / Retail Technology</h3>
+              <div class="company">JPMORGAN CHASE &amp; CO. · Hyderabad</div>
+            </div>
+            <div class="date">Jul 2022 – May 2026</div>
+          </div>
+          <ul>
+            <li>Supported technology operations across <strong>7,000+ branches and approximately 42,000 ATMs across North America</strong>.</li>
+            <li>Analysed operational metrics and team performance to identify trends, gaps and improvement opportunities.</li>
+            <li>Used Tableau, ServiceNow and enterprise tools for reporting, analysis and workflow management.</li>
+            <li>Worked with cross-functional stakeholders and development teams to investigate complex issues and drive resolution.</li>
+            <li>Mentored new team members and supported knowledge development across the team.</li>
+            <li>Contributed to AI adoption and business feedback initiatives, including AI-assisted research, documentation and workflow improvement.</li>
+            <li>Recognised through multiple performance and employee-excellence awards for ownership, customer service and operational contribution.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <div>
+              <h3>Senior Consultant – Google Ads / Digital Marketing</h3>
+              <div class="company">REGALIX · Hyderabad</div>
+            </div>
+            <div class="date">Earlier Career</div>
+          </div>
+          <ul>
+            <li>Supported advertisers across the <strong>Google Ads, Google Analytics, Merchant Center and Google Tag</strong> ecosystem.</li>
+            <li>Advised customers on campaign setup, optimisation, performance metrics, targeting and conversion-related issues.</li>
+            <li>Worked with ecommerce advertisers and developed understanding of paid search, customer intent and conversion performance.</li>
+            <li>Supported emerging advertising products including <strong>Performance Max</strong>.</li>
+            <li>Maintained strong customer satisfaction and was recognised as an <strong>Outstanding Performer</strong>.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <div>
+              <h3>Customer / Technical Support – Google Operations</h3>
+              <div class="company">International Customer Operations · Hyderabad</div>
+            </div>
+            <div class="date">Earlier Career</div>
+          </div>
+          <ul>
+            <li>Supported international customers and business users in a high-volume digital environment.</li>
+            <li>Built strong analytical, troubleshooting, written communication and client-management capabilities.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Selected Strategic Capabilities</h2>
+        <div class="achievements">
+          <div class="achievement"><strong>Paid Media</strong><span>Google Ads, Meta, LinkedIn, TikTok, YouTube, Performance Max</span></div>
+          <div class="achievement"><strong>SEO &amp; Search</strong><span>Technical SEO, content, intent, AEO, GEO, SXO</span></div>
+          <div class="achievement"><strong>Analytics</strong><span>GA4, Search Console, Tableau, Looker Studio, campaign reporting</span></div>
+          <div class="achievement"><strong>AI Marketing</strong><span>Research, strategy, content, creative workflows and optimisation</span></div>
+          <div class="achievement"><strong>Certifications</strong><span>NCFM / NCMP Level 1 plus focused Udemy training in SEO, paid media, AI ads, ecommerce and project management</span></div>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section class="side-section">
+        <h2>Target Fit</h2>
+        <div class="highlight">
+          <p><strong>Best positioning for XTGlobal</strong></p>
+          <p>Digital strategist with hands-on paid advertising, SEO, analytics and AI-enabled marketing experience — not a social-media posting profile.</p>
+          <p>Strong fit for campaign planning, paid-media optimisation, audience strategy, reporting, creative briefing and cross-functional coordination.</p>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h2>Marketing Stack</h2>
+        <div class="tags">
+          <span class="tag">Google Ads</span><span class="tag">Meta Ads</span><span class="tag">LinkedIn Ads</span>
+          <span class="tag">TikTok Ads</span><span class="tag">Performance Max</span><span class="tag">GA4</span>
+          <span class="tag">Search Console</span><span class="tag">GTM</span><span class="tag">Looker Studio</span>
+          <span class="tag">Tableau</span><span class="tag">SEMrush</span><span class="tag">Rank Math</span>
+          <span class="tag">WordPress</span><span class="tag">MailerLite</span><span class="tag">Omnisend</span>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h2>AI Toolkit</h2>
+        <div class="ai-box">
+          <p><strong>Generative AI</strong><br>ChatGPT · Claude · Kimi · Meta AI · Manus</p>
+          <p><strong>Creative &amp; Productivity</strong><br>Canva · Adobe Express · Grammarly · AI creative platforms</p>
+          <p><strong>Practical use</strong><br>Research · SEO · AEO/GEO · campaign ideation · content frameworks · creative briefs · reporting</p>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h2>Strengths</h2>
+        <ul class="side-list">
+          <li>Digital strategy</li>
+          <li>Paid campaign optimisation</li>
+          <li>Audience &amp; funnel thinking</li>
+          <li>SEO &amp; content strategy</li>
+          <li>Analytics &amp; reporting</li>
+          <li>AI adoption</li>
+          <li>International client communication</li>
+          <li>Cross-functional coordination</li>
+          <li>Team mentoring</li>
+        </ul>
+      </section>
+
+      <section class="side-section">
+        <h2>Recognition</h2>
+        <ul class="side-list">
+          <li>Outstanding Performer – Regalix</li>
+          <li>Unicorn Award – Cognizant</li>
+          <li>Multiple employee-excellence recognitions – JPMorgan Chase</li>
+          <li>100% CSAT recognition</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <div class="footer">
+    <span>SIRISHA CHAMARTHY · DIGITAL MARKETING &amp; PERFORMANCE MARKETING</span>
+    <span>Page 1</span>
+  </div>
+</section>
+
+<section class="page page-break">
+  <header class="hero">
+    <h1 class="name" style="font-size:22pt">CAMPAIGN &amp; AI PORTFOLIO SNAPSHOT</h1>
+    <div class="headline">Strategy • Paid Media • SEO • Analytics • AI</div>
+  </header>
+
+  <main class="main">
+    <div>
+      <section>
+        <h2>Representative Marketing Work</h2>
+
+        <div class="case">
+          <div class="case-title">Consumer / D2C Performance Marketing</div>
+          <p>Developed integrated promotional strategies combining paid social, paid search, organic content, website messaging, remarketing and email/SMS coordination for consumer brands. Focus areas included acquisition, offer positioning, audience segmentation and conversion journeys.</p>
+        </div>
+
+        <div class="case">
+          <div class="case-title">SEO + AEO + GEO Strategy</div>
+          <p>Developed search strategies that move beyond traditional keyword rankings to address search intent, answer-engine visibility, generative search discovery and search experience optimisation. Built content frameworks around topical relevance, entities, questions and conversion intent.</p>
+        </div>
+
+        <div class="case">
+          <div class="case-title">Lead Generation &amp; Paid Social</div>
+          <p>Worked on Meta lead-generation campaigns, audience targeting, creative concepts, campaign reporting and optimisation. Used performance data to identify opportunities in targeting, messaging and funnel experience.</p>
+        </div>
+
+        <div class="case">
+          <div class="case-title">Google Ads &amp; Performance Max</div>
+          <p>Experience across the Google advertising ecosystem including Search, Performance Max, Merchant Center, Analytics and Google Tag. Supported advertisers with campaign setup, optimisation, troubleshooting, measurement and performance interpretation.</p>
+        </div>
+
+        <div class="case">
+          <div class="case-title">AI-Enabled Marketing Operations</div>
+          <p>Applied generative AI as a strategic productivity layer rather than a replacement for marketing judgement — accelerating research, competitor analysis, content architecture, SEO briefs, campaign concepts, creative directions, repurposing and reporting.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>How I Use AI in Digital Marketing</h2>
+        <div class="achievements">
+          <div class="achievement"><strong>Research</strong><span>Competitor intelligence, market research, search intent and customer insights.</span></div>
+          <div class="achievement"><strong>Strategy</strong><span>Campaign architecture, audience ideas, positioning, content pillars and funnels.</span></div>
+          <div class="achievement"><strong>SEO</strong><span>Topic discovery, content briefs, entity thinking, AEO and GEO frameworks.</span></div>
+          <div class="achievement"><strong>Creative</strong><span>Ad concepts, social concepts, visual directions and short-form video ideation.</span></div>
+          <div class="achievement"><strong>Content</strong><span>Long-form structures, social copy, repurposing, email concepts and editorial planning.</span></div>
+          <div class="achievement"><strong>Optimisation</strong><span>Performance interpretation, testing ideas, reporting and next-step recommendations.</span></div>
+        </div>
+      </section>
+
+      <section style="margin-top:18px">
+        <h2>Career Narrative</h2>
+        <div class="ai-box">
+          <p><strong>Google advertising foundation → Digital marketing → Performance marketing → SEO &amp; analytics → Technical operations → AI-enabled marketing strategy</strong></p>
+          <p>This combination enables me to understand both the marketing objective and the technical/operational systems behind it — useful when coordinating with leadership, creative teams, technology teams, agencies and clients.</p>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section class="side-section">
+        <h2>Role Alignment</h2>
+        <ul class="side-list">
+          <li><strong>Digital strategy:</strong> Strong</li>
+          <li><strong>Paid advertising:</strong> Strong</li>
+          <li><strong>Audience targeting:</strong> Strong</li>
+          <li><strong>Analytics:</strong> Strong</li>
+          <li><strong>SEO:</strong> Strong</li>
+          <li><strong>AI marketing:</strong> Strong</li>
+          <li><strong>Content strategy:</strong> Strong</li>
+          <li><strong>Meta:</strong> Hands-on</li>
+          <li><strong>TikTok:</strong> Exposure / strategy</li>
+          <li><strong>Influencer marketing:</strong> Transferable strategy experience</li>
+          <li><strong>ANZ market:</strong> Target market / communication fit to be highlighted in interview</li>
+        </ul>
+      </section>
+
+      <section class="side-section">
+        <h2>Professional Attributes</h2>
+        <div class="tags">
+          <span class="tag">Strategic</span><span class="tag">Analytical</span><span class="tag">Creative</span>
+          <span class="tag">Technical</span><span class="tag">Data-driven</span><span class="tag">Client-focused</span>
+          <span class="tag">AI-ready</span><span class="tag">Collaborative</span>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h2>Education</h2>
+        <p><strong>B.Com (Hons.)</strong><br>Graduated 2013</p>
+      </section>
+
+      <section class="side-section">
+        <h2>Professional Certifications</h2>
+        <div class="ai-box">
+          <p><strong>NCFM / NSE</strong></p>
+          <p>Financial Markets – Beginners Level <strong>93%</strong><br>
+          Capital Markets – Dealers Level <strong>72%</strong><br>
+          Derivative Markets – Dealers Level <strong>83.5%</strong><br>
+          Commercial Banking in India <strong>65%</strong><br>
+          <strong>NSE Certified Market Professional (NCMP) – Level 1</strong></p>
+
+          <p><strong>SEO &amp; Digital Marketing</strong><br>
+          Mobile App Marketing &amp; ASO · SEO Tutorial for Beginners · SEO Link Building &amp; Backlink Building · On-Page SEO &amp; Keyword Research with AI · Ultimate SEO Training 2025 · SEO for WordPress Websites</p>
+
+          <p><strong>Advertising &amp; Programmatic</strong><br>
+          Introduction to Programmatic Advertising · Complete Programmatic Advertising Course with Tools · Facebook Ads &amp; Marketing · Facebook Ads Strategies · ChatGPT for Facebook Ads</p>
+
+          <p><strong>E-commerce &amp; Web</strong><br>
+          Shopify SEO · Shopify Dropshipping · WordPress for Beginners</p>
+
+          <p><strong>Project Management &amp; IT</strong><br>
+          Project Management Fundamentals · SSL/TLS Operations · REST APIs for Beginners</p>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h2>Languages</h2>
+        <ul class="side-list">
+          <li><strong>Fluent:</strong> Telugu, Hindi, English</li>
+          <li><strong>Basic:</strong> Tamil, Malayalam</li>
+          <li><strong>German:</strong> A1 Certified; pursuing higher levels</li>
+        </ul>
+      </section>
+
+      <section class="side-section">
+        <h2>Awards &amp; Recognition</h2>
+        <ul class="side-list">
+          <li><strong>Unicorn Award</strong> – High performance in Quality, Cognizant</li>
+          <li><strong>Outstanding Performer</strong> – Exceptional contributions, Regalix</li>
+          <li><strong>100% CSAT</strong> – Consistent perfect customer satisfaction ratings</li>
+          <li><strong>Employee Excellence Awards</strong> – Three awards, JPMorgan Chase &amp; Co.</li>
+          <li><strong>Fast-Track Promotion</strong> – Grade 502 to Grade 601 in 1.5 years, JPMorgan Chase &amp; Co.</li>
+        </ul>
+      </section>
+
+      <div class="disclaimer">
+        <strong>Resume note:</strong> Personal details such as date of birth, spouse name and nationality have intentionally been omitted because they are not required for a professional application and do not strengthen this role-specific profile.
+      </div>
+    </aside>
+  </main>
+
+  <div class="footer">
+    <span>SIRISHA CHAMARTHY · XTGLOBAL-TARGETED DIGITAL MARKETING RESUME</span>
+    <span>Page 2</span>
+  </div>
+</section>
+
+</body>
+</html>
